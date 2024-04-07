@@ -1,32 +1,37 @@
 ---
 interface Props {
-  title: string;
+  title?: string;
+  pageDescription?: string;
 }
 
-const { title } = Astro.props;
+const { title = "Bym Producciones", pageDescription } = Astro.props;
 import Header from "../components/Header.astro";
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
+    <meta name="description" content={pageDescription} />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
   <body>
-    <Header />
-    <slot />
+    <main>
+      <Header />
+      <slot />
+    </main>
   </body>
 </html>
 <style is:global>
   :root {
-    --accent: 136, 58, 234;
-    --accent-light: 224, 204, 250;
-    --accent-dark: 49, 10, 101;
+    /* --accent: 255, 195, 0; */
+    --accent: 178, 136, 0;
+    --accent-light: 255, 214, 10;
+    --accent-dark: 0, 53, 102;
+    --accent-black: 0, 29, 1;
     --accent-gradient: linear-gradient(
       45deg,
       rgb(var(--accent)),
@@ -36,8 +41,17 @@ import Header from "../components/Header.astro";
   }
   html {
     font-family: system-ui, sans-serif;
-    background: #13151a;
-    background-size: 224px;
+    background: rgb(0, 8, 20);
+    /* background: linear-gradient(
+      0deg,
+      rgba(0, 8, 20, 1) 0%,
+      rgba(0, 29, 61, 1) 47%,
+      rgba(0, 53, 102, 1) 100%
+    ); */
+    background-size: 100%;
+
+    background-repeat: no-repeat;
+    /* background-size: 224px; */
   }
   code {
     font-family:
