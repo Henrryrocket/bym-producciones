@@ -1,10 +1,17 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+interface Props {
+  title?: string;
+  pageDescription?: string;
+}
+
+const { title = "Acerca de Bym Producciones", pageDescription } = Astro.props;
 ---
 
-<Layout title="About BYM Producciones">
+<Layout title={title}>
   <h1>Acerca de BYM Producciones</h1>
-  <p>
+  <p class="text-white mt-4 text-center mx-auto">
     BYM es una productora audiovisual enfocada en la produccion musical,
     fotogrofia
   </p>
