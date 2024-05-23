@@ -1,34 +1,25 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
-import Card from "../components/Card.astro";
-import Hero2 from "@components/Hero2.astro";
-import Hero3 from "@components/Hero3.astro";
-import NewHero from "@components/NewHero.astro";
-import Cards from "@components/images/Cards.astro";
-import Footer from "@components/Footer.astro";
-import Gallery from "@components/Gallery.astro";
 ---
 
 <Layout title="Welcome to BYM Producciones">
-  <!-- <Hero2 /> -->
   <Hero />
-  <h1>El es Brayam, Brayam es hermoso 💛😍</h1>
-  <!-- <Hero3 /> -->
-  <!-- <NewHero /> -->
-  <!-- <Cards /> -->
-
-  <!-- <Gallery title="Fotografia" /> -->
-
-  <!-- <Card title="Test card" href="www.google.com" body="Testing a Card" />
-  <Card title="Test card" href="www.google.com" body="Testing a Card" />
-  <Card title="Test card" href="www.google.com" body="Testing a Card" /> -->
+  <div class="block place-content-center text-center m-2 py-24">
+    <h1 class="my-8">El es Brayam, Brayam es hermoso 💛😍</h1>
+    <a
+      href="https://wa.me/+593939932526/?text=Hola%20brayam%20es%20hermoso"
+      class="mt-6 animate-bounce inline-block rounded bg-[#ffd60a] px-5 py-3 text-sm font-medium text-black hover:bg-yellow-400 focus:outline-none focus:ring"
+    >
+      Contacto
+    </a>
+  </div>
 </Layout>
 
 <style>
   h1 {
     color: aliceblue;
     text-align: center;
-    margin: 10rem auto;
+    max-height: 800px;
   }
 </style>

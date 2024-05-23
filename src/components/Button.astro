@@ -9,8 +9,8 @@ const text = Astro.props.text || "Botón";
     font-size: 1rem;
     font-weight: bold;
     text-transform: uppercase;
-    color: #fff;
-    background-color: #007bff;
+    color: var(--accent-black);
+    background-color: var(--accent-gradient);
     padding: 0.75rem 1.5rem;
     border: none;
     border-radius: 1rem;
@@ -19,6 +19,6 @@ const text = Astro.props.text || "Botón";
   }
 
   .btn:hover {
-    background-color: #0069d9;
+    background-color: var(--accent);
   }
 </style>
