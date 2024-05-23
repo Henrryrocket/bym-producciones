@@ -4,11 +4,22 @@
 
 <main>
   <section>
-    <div class="home-opening">
-      <h1 class="hero-title">
-        <span class="text-gradient">Bienvenido a BYM Producciones</span>
-      </h1>
-      <p>Llevamos tu música al siguiente nivel.</p>
+    <div class="home-opening relative h-screen">
+      <div
+        class="relative z-10 flex flex-col items-left justify-start content-start h-full px-4 sm:px-6 lg:px-8 pt-40"
+      >
+        <p class="subtitle">Llevamos tu música al siguiente nivel</p>
+        <h1
+          class="hero-title
+        text-5xl
+        font-bold
+        text-yellow-300
+        sm:text-6xl
+        lg:text-8xl"
+        >
+          Bym <span class="text-gradient">Producciones</span>
+        </h1>
+      </div>
     </div>
   </section>
 </main>
@@ -20,17 +31,16 @@
     width: 100%;
     /* max-width: calc(100% - 2rem); */
     color: white;
-    font-size: 20px;
+    /* font-size: 20px; */
     line-height: 1.6;
   }
   .home-opening {
     background-color: #202020;
-    border: 2px solid white;
     background: url("https://images.unsplash.com/photo-1518972559570-7cc1309f3229?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-    width: auto;
+    /* width: auto; */
     opacity: 0.9;
-    height: 80vh;
-    padding: 10rem;
+    background-attachment: fixed;
+    height: 50vh;
     z-index: -1;
   }
   .astro-a {
@@ -43,12 +53,11 @@
     z-index: -1;
   }
   h1 {
-    font-size: 4rem;
+    /* font-size: 4rem; */
     font-weight: 700;
     line-height: 1;
-    text-wrap: wrap;
+    /* text-wrap: nowrap; */
     text-align: left;
-    text-transform: uppercase;
     margin-bottom: 0.2em;
     height: 100%;
     z-index: 99;
@@ -60,8 +69,9 @@
     -webkit-text-fill-color: transparent;
     background-size: 400%;
     background-position: 0%;
-    text-wrap: wrap;
+    /* text-wrap: wrap; */
     display: block;
+    width: 100%;
   }
   .instructions {
     margin-bottom: 2rem;
@@ -89,5 +99,10 @@
     grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
     gap: 2rem;
     padding: 0;
+  }
+  .subtitle {
+    text-transform: uppercase;
+    font-weight: 200;
+    font-size: 18px;
   }
 </style>

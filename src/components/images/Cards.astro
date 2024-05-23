@@ -1,37 +1,110 @@
 ---
 import { createSignal } from "solid-js";
+const bgImageUrl = "https://source.unsplash.com/1600x900/?music,studio";
+const bgImageUrl2 = "https://source.unsplash.com/1600x900/?music,piano";
+const bgImageUrl3 = "https://source.unsplash.com/1600x900/?music,guitar";
 ---
 
 <style>
-  @keyframes border-glow {
+  /* @keyframes border-glow {
     0% {
       border-color: transparent;
     }
-    100% {
-      border-color: #00f;
+    50% {
+      border-color: var(--accent-gradient);
     }
+  } */
+  .link-card {
+    list-style: none;
+    display: flex;
+    padding: 1px;
+    /* background-color: #23262d; */
+    background-image: none;
+    background-size: 400%;
+    border-radius: 7px;
+    background-position: 100%;
+    transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+    overflow: unset;
+  }
+  .link-card > a {
+    width: 100%;
+    text-decoration: none;
+    line-height: 1.4;
+    /* padding: calc(1.5rem - 1px); */
+    border-radius: 8px;
+    color: white;
+    background-color: #23262d;
+    opacity: 0.8;
+  }
+  h2 {
+    margin: 0;
+    font-size: 1.25rem;
+    transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  p {
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+  }
+  .link-card:is(:hover, :focus-within) {
+    background-position: 0;
+    background-image: var(--accent-gradient);
+  }
+  .link-card:is(:hover, :focus-within) h2 {
+    color: rgb(var(--accent-light));
   }
 </style>
 
 <div
-  class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4 p-4"
+  class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-10 md:space-x-4 p-4"
 >
-  {
-    Array(3)
-      .fill()
-      .map((_, index) => (
-        <a
-          href="#"
-          key={index}
-          class="relative block w-full md:w-1/3 bg-white shadow-md rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 group"
-        >
-          <div class="absolute inset-0 border-2 border-transparent group-hover:animate-[border-glow_1s_forwards]" />
-          <img
-            src={`https://via.placeholder.com/400x300?text=Image+${index + 1}`}
-            alt={`Image ${index + 1}`}
-            class="w-full h-full object-cover"
-          />
-        </a>
-      ))
-  }
+  <div class="link-card">
+    <div
+      class="absolute inset-0 border-2 border-transparent group-hover:animate-[border-glow_1s_forwards]"
+    >
+      <a
+        href="#"
+        class="relative block w-full md:w-1/3 bg-white shadow-md rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 group"
+      >
+        <h2>MUSIC</h2>
+        <img
+          src={bgImageUrl}
+          alt="gallery images"
+          class="w-full h-full object-cover"
+        />
+      </a>
+    </div>
+  </div>
+  <div class="link-card">
+    <div
+      class="absolute inset-0 border-2 border-transparent group-hover:animate-[border-glow_1s_forwards]"
+    >
+      <a
+        href="#"
+        class="relative block w-full md:w-1/3 bg-white shadow-md rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 group"
+      >
+        <img
+          src={bgImageUrl2}
+          alt="gallery images"
+          class="w-full h-full object-cover"
+        />
+      </a>
+    </div>
+  </div>
+  <div class="link-card">
+    <div
+      class="absolute inset-0 border-2 border-transparent group-hover:animate-[border-glow_1s_forwards]"
+    >
+      <a
+        href="#"
+        class="relative block w-full md:w-1/3 bg-white shadow-md rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 group"
+      >
+        <img
+          src={bgImageUrl3}
+          alt="gallery images"
+          class="w-full h-full object-cover"
+        />
+      </a>
+    </div>
+  </div>
 </div>
